@@ -1,0 +1,7 @@
+mosquitto_pub -d -u pusher -P 1 -t test -m "Hello, World!"<html>
+<body>>
+<?php
+	
+?>
+</body>
+</html>

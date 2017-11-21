@@ -1,0 +1,10 @@
+<html>
+<body>
+<?php
+mosquitto_pub -d -u pusher -P 1 -t test -m "Hello, World!"	system("mosquitto_pub -d -u pusher -P 1 -t test -m "Hello, World!"");
+
+	echo '<p>Hello World</p>';
+
+?>
+</body>
+</html>
