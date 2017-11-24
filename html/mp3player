@@ -1,0 +1,5 @@
+#!/bin/bash
+
+date +%m_%d_%y-%H.%M.%S
+sudo play -q sound.mp3 &
+
