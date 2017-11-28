@@ -1,5 +1,18 @@
 #!/bin/bash
-
-date +%m_%d_%y-%H.%M.%S
-sudo play -q sound.mp3 &
+   sudo pkill -x mpg321
+if [ "$1" == "piano" ]
+then
+   sudo mpg321 -q piano.mp3
+elif [ "$1" == "mozart" ]
+then
+   sudo mpg321 -q mozart.mp3
+elif [ "$1" == "yiruma" ]
+then
+   sudo mpg321 -q Yiruma.mp3
+elif [ "$1" == "beethoven" ]
+then
+   sudo mpg321 -q beethoven.mp3
+else 
+   sudo pkill -x mpg321
+fi
 

@@ -9,3 +9,10 @@ www-data ALL=NOPASSWD: ALL
 >> Y
 >> enter
 
+
+note 2: amixer scontrols 
+run this command to know the name
+error: amixer: Unable to find simple control 'Master', 0
+
+etc/group
+edit to audio:x:29:pi,pulse,www-data

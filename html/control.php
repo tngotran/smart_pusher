@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   
@@ -33,7 +34,8 @@
 	    		    }
 	   		}
 		       a.send();
-		 })
+		 });
+
 		 $('#musicOn').click(function(){     // Chỗ off là bạn thay cái id mà bạn đặt cho button
 	   		var a = new XMLHttpRequest();
 		 	a.open("GET", "music.php?q="+"musicOn",true);   // thay cái tatden.php thành file thực thi của bạn
@@ -48,9 +50,73 @@
 	   		}
 		       a.send();
 		 });
-		 $('#musicOff').click(function(){     // Chỗ off là bạn thay cái id mà bạn đặt cho button
+
+		
+		 $('#piano').click(function(){     // Chỗ off là bạn thay cái id mà bạn đặt cho button
 	   		var a = new XMLHttpRequest();
-		 	a.open("GET", "music.php?q=" + "musicOff",true);   // thay cái tatden.php thành file thực thi của bạn
+		 	a.open("GET", "music.php?q="+"piano",true);   // thay cái tatden.php thành file thực thi của bạn
+		        a.onreadystatechange=function(){
+			    if(a.readyState==4){
+				     if(a.status == 200){
+				     }
+				     else{
+					     alert("Error")
+				     }
+	    		    }
+	   		}
+		       a.send();
+		 });
+
+		 $('#mozart').click(function(){     // Chỗ off là bạn thay cái id mà bạn đặt cho button
+	   		var a = new XMLHttpRequest();
+		 	a.open("GET", "music.php?q="+"mozart",true);   // thay cái tatden.php thành file thực thi của bạn
+		        a.onreadystatechange=function(){
+			    if(a.readyState==4){
+				     if(a.status == 200){
+				     }
+				     else{
+					     alert("Error")
+				     }
+	    		    }
+	   		}
+		       a.send();
+		 });
+
+		 $('#yiruma').click(function(){     // Chỗ off là bạn thay cái id mà bạn đặt cho button
+	   		var a = new XMLHttpRequest();
+		 	a.open("GET", "music.php?q="+"yiruma",true);   // thay cái tatden.php thành file thực thi của bạn
+		        a.onreadystatechange=function(){
+			    if(a.readyState==4){
+				     if(a.status == 200){
+				     }
+				     else{
+					     alert("Error")
+				     }
+	    		    }
+	   		}
+		       a.send();
+		 });
+		 $('#beethoven').click(function(){     // Chỗ off là bạn thay cái id mà bạn đặt cho button
+	   		var a = new XMLHttpRequest();
+		 	a.open("GET", "music.php?q="+"beethoven",true);   // thay cái tatden.php thành file thực thi của bạn
+		        a.onreadystatechange=function(){
+			    if(a.readyState==4){
+				     if(a.status == 200){
+				     }
+				     else{
+					     alert("Error")
+				     }
+	    		    }
+	   		}
+		       a.send();
+		 });
+
+
+
+
+
+		 $('#musicOff').click(function(){     // Chỗ off là bạn thay cái id mà bạn đặt cho button
+	   		var a = new XMLHttpRequest();		 	a.open("GET", "music.php?q=" + "musicOff",true);   // thay cái tatden.php thành file thực thi của bạn
 		        a.onreadystatechange=function(){
 			    if(a.readyState==4){
 				     if(a.status == 200){
@@ -109,13 +175,25 @@
 
 	</head>
 <body>
+
   <button type="button" id="on">Light On</button><br>
   <button type="button" id="off">Light Off</button><br>  
+  <br><br>
   <button type="button" id="musicOn">Music On</button><br>
   <button type="button" id="musicOff">Music Off</button><br>
+ <br><br>
+ <button type="button" id="mozart">Mozart</button><br>
+ <button type="button" id="piano">Piano</button><br>
+ <button type="button" id="yiruma">Yiruma</button><br>
+ <button type="button" id="beethoven">Beethoven</button><br>
+ <br><br>
+ <button type="button" id="sleep">Sleep</button><br>
+ <button type="button" id="bath">bath</button><br>
+ <br><br>
  <button type="button" id="vlUp">Volume UP</button><br>
  <button type="button" id="vlDown">Volume DOWN</button><br>
  <button type="button" id="vlMute">Set Volume 0%</button><br>
+
 	
   <?php 
 
@@ -123,7 +201,7 @@
      $newld = "/run/user/1000/pulse/native";  // extra paths to add 
   //  if ($saved) { $newld .= ":$saved"; }           // append old paths if any 
     putenv("PULSE_SERVER=$newld");        // set new value 
-     echo exec('sudo amixer set Master on 2>&1') . " \n";	
+     echo exec('sudo amixer set PCM on 2>&1') . " \n";	
    //  echo exec('sudo amixer -D pulse sset Master 50% 2>&1');
     // echo date("l");
     // putenv("PULSE_SERVER=$saved");        // restore old value

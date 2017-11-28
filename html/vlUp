@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo amixer sset Master 5%+
+sudo amixer -c 0 set PCM 5dB+

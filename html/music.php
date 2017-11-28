@@ -1,8 +1,6 @@
+
 <?php
-	$q = $_REQUEST["q"];
-	if($q == "musicOn"){
-	      shell_exec('./mp3player');
-	}else if($q == "musicOff"){
-	     exec('sudo pkill -f play');
-	}
+	$q = $_REQUEST["q"];		
+	shell_exec("./mp3player ".$q);
+
 ?>
