@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo amixer -c 0 set PCM 5dB+

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+sudo pkill -x mpg321
+sudo pkill -x mpv
+sudo pkill -x mpsyt
+sudo killall -x mpsyt
+
+if [ "$1" == "pl1" ]
+then
+   sudo mpsyt pl https://www.youtube.com/watch?v=OkNaLEH4AHk\&list=PLFabbNcpW7rGAYyNPlhJt0Do5kQWh-Tli, shuffle, repeat all, 1-
+elif [ "$1" == "pop" ]
+then
+   sudo mpsyt pl https://www.youtube.com/watch?v=Pj5PkQY9x8I\&list=PLFabbNcpW7rE2IO48sx20wREpvx3ffWTW, shuffle, repeat all, 1-
+elif [ "$1" == "kara" ]
+then
+   sudo mpsyt pl https://www.youtube.com/watch?v=SSszeIGD6I8\&list=PLFabbNcpW7rHGzoGNv69gsw1zm6vLzXjc, shuffle, repeat all, 1-
+elif [ "$1" == "pl2" ]
+then
+   sudo mpsyt pl https://www.youtube.com/watch?v=OkNaLEH4AHk\&list=PLFabbNcpW7rEa5q_gPUWx-jgfs-yAHVC9, shuffle, repeat all, 1-
+elif [ "$1" == "pl3" ]
+then
+   sudo mpsyt pl https://www.youtube.com/watch?v=OkNaLEH4AHk\&list=PLFabbNcpW7rE1KgFSYkkqH1jRONpJrakr, shuffle, repeat all, 1-
+else
+   sudo pkill -x mpg321
+   sudo pkill -x mpv
+   sudo pkill -x vlc
+   sudo pkill -x mpsyt
+   sudo killall -x mpsyt
+
+fi
+
+
+
+
+

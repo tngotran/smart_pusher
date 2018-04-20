@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo amixer sset PCM -- -10239
